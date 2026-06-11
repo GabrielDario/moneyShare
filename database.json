@@ -1,0 +1,30 @@
+{
+    "users": [
+      {
+        "email": "gabriel",
+        "password": "123"
+      }
+    ],
+    "rooms": [
+      {
+        "id": 1,
+        "name": "Viagem Praia",
+        "participants": [
+          "João",
+          "Maria"
+        ],
+        "expenses": [
+          {
+            "description": "Almoço",
+            "value": 100,
+            "paidBy": "João"
+          },
+          {
+            "description": "Transporte",
+            "value": 50,
+            "paidBy": "Maria"
+          }
+        ]
+      }
+    ]
+  }
