@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="card">
+        <h2 id="room-title"></h2>
+        <input id="participant-name" placeholder="Participante">
+        <button id="add-participant-btn">Adicionar Participante</button>
+        <ul id="participants-list"></ul>
+        <hr>
+        <input id="expense-description" placeholder="Descrição">
+        <input id="expense-value" type="number" placeholder="Valor">
+        <select id="expense-paid-by"></select>
+        <button id="add-expense-btn">Adicionar Despesa</button>
+        <ul id="expenses-list"></ul>
+        <h3>Resumo</h3>
+        <div id="summary"></div>
+        <a href="dashboard.html">Voltar</a>
+    </div>
+    <script src="js/database.js"></script>
+    <script src="js/room.js"></script>
+</body>
+
+</html>
