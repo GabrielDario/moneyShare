@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sala</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Gerenciador de Sala</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="card">
-        <h2 id="room-title"></h2>
-        <input id="participant-name" placeholder="Participante">
-        <button id="add-participant-btn">Adicionar Participante</button>
-        <ul id="participants-list"></ul>
-        <hr>
-        <input id="expense-description" placeholder="Descrição">
-        <input id="expense-value" type="number" placeholder="Valor">
-        <select id="expense-paid-by"></select>
-        <button id="add-expense-btn">Adicionar Despesa</button>
-        <ul id="expenses-list"></ul>
-        <h3>Resumo</h3>
-        <div id="summary"></div>
-        <a href="dashboard.html">Voltar</a>
-    </div>
-    <script src="js/database.js"></script>
-    <script src="js/room.js"></script>
-</body>
+    <div class="container">
+        <header>
+            <h1 id="display-room-name">Nome da Sala</h1>
+            <button class="btn-logout" style="background-color: var(--text-muted);" onclick="window.location.href='dashboard.html'">Voltar</button>
+        </header>
 
+        <div class="card">
+            <h2>Participantes</h2>
+            <div id="participants-list" style="margin-bottom: 15px;"></div>
+            <form id="add-participant-form" style="display:flex; gap:10px;">
+                <input type="text" id="part-name" required placeholder="Adicionar por Nome/E-mail">
+                <button type="submit" style="width:auto; white-space:nowrap;">Adicionar</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Adicionar Despesa</h2>
+            <form id="expense-form">
+                <div class="form-group">
+                    <label>Descrição</label>
+                    <input type="text" id="exp-desc" required placeholder="Ex: Mercado, Padaria, Combustível">
+                </div>
+                <div class="form-group">
+                    <label>Valor (R$)</label>
+                    <input type="number" step="0.01" id="exp-val" required placeholder="0.00">
+                </div>
+                <div class="form-group">
+                    <label>Quem pagou?</label>
+                    <select id="exp-paid-by" required>
+                        </select>
+                </div>
+                <button type="submit">Adicionar Despesa</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Histórico de Despesas</h2>
+            <div id="expenses-history" style="margin-bottom: 20px;"></div>
+
+            <h2 style="border-top: 1px solid var(--border); padding-top: 15px;">Fechamento de Contas</h2>
+            <div id="room-summary">
+                </div>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="room.js"></script>
+</body>
 </html>

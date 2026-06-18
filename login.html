@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisor de Despesas - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 style="text-align:center; margin-bottom: 20px;">Divisor de Contas</h1>
+            
+            <form id="login-form">
+                <h2 id="form-title">Acessar Conta</h2>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" id="email" required placeholder="exemplo@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" id="password" required placeholder="******">
+                </div>
+                <button type="submit" id="btn-submit">Entrar</button>
+                <button type="button" class="secondary" id="btn-toggle-mode">Não tem conta? Cadastre-se</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

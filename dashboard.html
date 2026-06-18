@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/database.js"></script>
-    <script defer  src="js/dashboard.js"></script>
+    <title>Dashboard - Minhas Salas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="card">
-        <h2>Salas</h2>
-        <input id="room-name" placeholder="Nome da sala">
-        <button id="create-room-btn">Criar Sala</button>
-        <ul id="rooms-list"></ul>
-        <button id="logout-btn">Sair</button>
-    </div>
-</body>
+    <div class="container">
+        <header>
+            <h1>Minhas Salas</h1>
+            <button class="btn-logout" onclick="logout()">Sair</button>
+        </header>
 
+        <div class="card">
+            <h2>Criar Nova Sala</h2>
+            <form id="create-room-form">
+                <div class="form-group">
+                    <label>Nome da Sala (ex: Viagem de Férias)</label>
+                    <input type="text" id="room-name" required placeholder="Digite o nome da sala...">
+                </div>
+                <button type="submit">Criar Sala</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Suas Salas Disponíveis</h2>
+            <div id="rooms-list">
+                </div>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="dashboard.js"></script>
+</body>
 </html>
