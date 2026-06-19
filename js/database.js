@@ -28,13 +28,13 @@ function setLoggedUser(user) {
 
 function logout() {
     localStorage.removeItem('splitwise_logged_user');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 // Proteção de rotas simples
 function checkAuth() {
     if (!getLoggedUser()) {
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
     }
 }
 
